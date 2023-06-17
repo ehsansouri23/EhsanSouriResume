@@ -1,104 +1,101 @@
-\documentclass[11pt, a4paper, color, final]{moderncv}
-\moderncvtheme[blue]{classic}
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{russell}
 
-\usepackage[scale=0.8]{geometry}
-\recomputelengths{}
-\setlength{\hintscolumnwidth}{3.5cm}
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-\firstname{Ehsan}
-\lastname{Souri}
-\title{Software Engineer}
-\phone[mobile]{+98 912 01 47 689}
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% russell Colors: russell-emerald, russell-skyblue, russell-red, russell-pink, russell-orange
+%                 russell-nephritis, russell-concrete, russell-darknight, russell-purple
+\colorlet{russell}{russell-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{russell}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with russell color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Ehsan}{Souri}
+\position{Software Engineer}
+% \address{YOUR ADDRESS}
+
+\mobile{+989120147689}
 \email{ehsansouri23@gmail.com}
-\homepage{https://www.linkedin.com/in/souri-ehsan/}
-\photo{ehsanSouri.jpg}
+% \dateofbirth{January 1st, 1970}
+%\homepage{www.posquit0.com} 
+\github{github.com/ehsansouri23}
+\linkedin{linkedin.com/in/souri-ehsan/}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+% % \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
 
+% \quote{``Simplicity is deceptively complicated."}
+
+
+%-------------------------------------------------------------------------------
+ %	BIBLIOGRAPHY
+ %-------------------------------------------------------------------------------
+% \addbibresource{cv/references.bib}
+
+%-------------------------------------------------------------------------------
 \begin{document}
 
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
 
-\maketitle
-
-\section{Summary}
-I'm studying computer engineering. I have +2 years of experience working with big data tools, developing server-side and data-intensive applications, data pipelines, and real-time processing applications.
-I have good experience in Java and I'm familiar with python.
-I like learning more about software architecture, design patterns, test-driven development, and cutting-edge technologies.
-
-\section{Work Experience}
-\cventry{Mar 2023--current}{Software Engineer}{Ramzinex}{Tehran, Iran}{}{%
-  \begin{itemize}
-    \item developing and maintaining Ramzinex trading core, which is one of the most extensive crypto exchanges in Iran with about 10M monthly active users
-    \item redesigning old services which results in 300ms better response time
-    \item establishing CI/CD pipelines, with results in reduction of development failures to less than 5%
-    \item mentoring junior developers
-  \end{itemize}
-  \newline \textbf{Skills:} Golang, Apache Flink
-}
-
-\cventry{May 2021--Mar 2023}{Software Engineer}{Tapsell}{Tehran, Iran}{}{%
-  \begin{itemize}
-    \item developing and maintaining Data Platform with about 10 microservices, which handles requests for more than 40M monthly users
-    \item developing stream processing application with handles about 5K events per second
-    \item designing and developing marketing automation product from scratch
-    \item communicating with AI and data science team to use the data and train their models
-  \end{itemize}
-  \newline \textbf{Skills:} Apache Kafka, Apache Druid, Apache Kudu, Apache Impala, Spring Boot, Elasticsearch, MongoDB, Cassandra, JUnit, Kubernetes
-}
-
-\cventry{Apr 2020--May 2021}{Android Developer}{Mahsan}{Tehran, Iran}{}{%
-  \begin{itemize}
-    \item designing and developing Messenger application from scratch
-    \item developing and maintaining VPN client application, which is a fork from OPEN VPN
-  \end{itemize}
-  \textbf{Skills:} Kotlin, JUnit, Kotlin Coroutines, Reactive Programming
-}
-
-\cventry{Nov 2017--Apr 2020}{Android Developer}{Oddrun}{Tehran, Iran}{}{%
-  \begin{itemize}
-    \item developing and maintaining Telfa application with more than 1M download in google play, which is a fork from telegram open source project
-    \item developing and maintaining Resana Ad network sdk, which is used in android applications and has about 2M monthly active users
-    \item developing and maintaining Befrest push notification sdk which is one of the mostly used iranian push notification sdks, with about 5M monthly users and 1K message per second 
-  \end{itemize}
-  \textbf{Skills:} Kotln, Java, JUnit, Web Socket, Test Driven Development
-}
-
-% \cventry{Jun 2017--Oct 2017}{Internship}{Sarashpazpapion}{Tehran, Iran}{}{%
-% An Android app to show recipes. Food Network Social Network. Most of the focus of this project has been on the user-friendly interface
-% }
-
-
-\section{Education}
-\cventry{2022}{M.Sc Information Technology}{University of Tehran}{Tehran, Iran}{}{}
-\cventry{2016--2021}{B.Sc Computer Software Engineering}{Amirkabir University of Technology}{Tehran, Iran}{}{}
-% \cventry{2012--2016}{Diploma of Math \& Physics}{Allameh Helli school}{Tehran, Iran}{}{}
-
-\section{Skills}
-
-\cvitem{Programming Languages}{Java, Kotlin, Golang}
-\cvitem{Databases \& Analytics Engines}{Postgres, MongoDB, Cassandra, Elasticsearch, Apache Druid}
-\cvitem{Tools \& Frameworks}{Spring Boot, Java Hibernate, Apache Kafka, Android}
-
-% \section{Projects}
-% \cvitem{Shatoot Application}{%
-% An android application for buying fruit and snacks online. The full development of this Android app has been with me. The project has tried to make the designs attractive and user-friendly}
-
-% \cvitem{Smart Home Application}{%
-% An android application for communicating with home sensors like lamps and sirens etc.
-% One of the most important parts of this project was creating an ongoing and stable MQTT connection and optimizing battery and data usage.}
-
-\section{Languages}
-
-\cvitemwithcomment{English}{Proficient}{}
-\cvitemwithcomment{Persian}{Native}{}
-
-\section{Teaching Experience}
-
-\cventry{}
-  {Principles of Computer and Programming}
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
   {}
-  {Amirkabir University of Technology}
-  {Teacher assistant for iranian and also international students(teaching in english)}
-  {Sep 2017--Feb 2018}
+  {\thepage}
 
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{cv/summary.tex}
+\input{cv/experience.tex}
+\input{cv/education.tex}
+% \input{cv/projects.tex}
+\input{cv/skills.tex}
+% \input{cv/achievements.tex}
+% \input{cv/publications.tex}
+% \input{cv/interests.tex}
+\input{cv/languages.tex}
 
-
+\vspace*{\fill}
+% \centering{\textbf{References available upon request.}}
+%-------------------------------------------------------------------------------
 \end{document}
