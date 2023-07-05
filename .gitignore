@@ -7,6 +7,5 @@
 *.toc
 *.pdf
 *.bcf
-*.cls
 *run.xml
 *.synctex.gz
