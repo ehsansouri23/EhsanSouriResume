@@ -2,6 +2,11 @@ name: latex
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/latex.yaml
+      - '**.tex'
+      - latexmk
   
 jobs:
   build_latex:
