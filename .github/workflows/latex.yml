@@ -12,9 +12,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@3.2.0
         with:
-          root_file: |
-            resume.tex
-            russell.cls
+          root_file: resume.tex
           latexmk_use_lualatex: true
           extra_fonts: |
             ./fonts/FontAwesome.ttf
@@ -28,6 +26,9 @@ jobs:
             ./fonts/Roboto-Regular.ttf
             ./fonts/Roboto-Thin.ttf
             ./fonts/Roboto-ThinItalic.ttf
+
+        env:
+          TEXINPUTS: "russell.cls"
             
       - name: release
         uses: softprops/action-gh-release@v1
