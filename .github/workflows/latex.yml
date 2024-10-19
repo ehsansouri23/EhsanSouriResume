@@ -28,7 +28,7 @@ jobs:
             ./fonts/Roboto-ThinItalic.ttf
 
         env:
-          TEXINPUTS: "russell.cls"
+          TEXINPUTS: ".:russell.cls:"
             
       - name: release
         uses: softprops/action-gh-release@v1
