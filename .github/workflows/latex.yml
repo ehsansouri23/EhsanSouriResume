@@ -19,7 +19,13 @@ jobs:
       - name: Install TeX Live
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-luatex texlive-fonts-recommended texlive-latex-recommended texlive-latex-extra texlive-fonts-extra
+          sudo apt-get install -y texlive-luatex \
+                                  texlive-fonts-recommended \
+                                  texlive-latex-recommended \
+                                  texlive-latex-extra \
+                                  texlive-fonts-extra \
+                                  texlive-bibtex-extra \
+                                  texlive-biblatex
 
       - name: List fonts (optional debug)
         run: fc-list | grep -i roboto || true
